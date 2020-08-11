@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        canvas {
+            margin: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="login_wrapper">
+        <input type="text" placeholder="Name" id="username_input">
+        <button onclick="onJoin()">Play</button>
+    </div>
+    <div id="game" style="display: none;">
+        <div id="sketch-holder"></div>
+        <div id="msgWrapper">
+            <h3>Messages</h3>
+            <div id="messages"></div>
+            <input type="text" id="msgString" placeholder="Type Message">
+            <button onclick="sendMsg()" id="sendMsg">Send</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <!-- <script src="..standalone/game.js"></script> -->
+    <script src="drawScreen.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
