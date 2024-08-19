@@ -4,7 +4,7 @@ function onJoin() {
     var username = document.getElementById('username_input').value;
     socket.emit('signIn', username);
     document.getElementById('login_wrapper').style.display = "none";
-    document.getElementById('game').style.display = "block";
+    document.getElementById('game').style.display = "flex";
     inGame = true;
 }
 socket.on('newFrame', function(data) {

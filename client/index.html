@@ -4,19 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake</title>
-    <style>
+    <!-- <style>
         * {
             margin: 0;
             padding: 0;
             border: 0;
         }
+        body {
+            padding: 1%;
+        }
         canvas {
             margin: auto;
             display: block;
         }
-    </style>
+        #login_wrapper {
+            padding: 1em;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+    </style> -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1 style="text-align: center">Multiplayer Snake</h1>
     <div id="login_wrapper">
         <input type="text" placeholder="Name" id="username_input">
         <button onclick="onJoin()">Play</button>
@@ -26,8 +37,10 @@
         <div id="msgWrapper">
             <h3>Messages</h3>
             <div id="messages"></div>
-            <input type="text" id="msgString" placeholder="Type Message">
-            <button onclick="sendMsg()" id="sendMsg">Send</button>
+            <div id="msginputwrapper">
+                <input type="text" id="msgString" placeholder="Type Message">
+                <button onclick="sendMsg()" id="sendMsg">Send</button>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
